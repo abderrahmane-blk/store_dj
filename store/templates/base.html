@@ -1,0 +1,48 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="ar" class="h-100" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>متجر كتب</title>
+  <script defer src="{%static 'js/158.35d21ad2.js'%}"></script>
+    <script defer src="{% static 'js/app.2133d498.js'%}"></script>
+    <link href="{% static 'css/158.css'%}" rel="stylesheet">
+    <link href="{% static 'css/app.css'%}" rel="stylesheet"></head>
+
+  <body class="d-flex flex-column h-100 bg-light">
+    {% include 'partials/header.html'%}
+      <div class="container">
+        <div
+          class="collapse navbar-collapse mt-2 mt-lg-0"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav my-2 my-lg-0">
+            {%for category in categories%}
+              <li class="nav-item">
+              <a class="nav-link mx-1" href="category.html" role="button">
+
+
+                {{category.name}}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      {%block content %}
+      {%endblock %}
+    </main>
+    {%include 'partials/footer.html'%}
+
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="{%static 'js/main.js'%}"></script>
+
+  </body>
+</html>

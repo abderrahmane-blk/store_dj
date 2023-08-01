@@ -1,0 +1,26 @@
+{% load i18n %}
+
+<form action="{%url 'store.category'%}" class="d-flex mx-auto">
+            <div class="input-group">
+              <input
+                name="query"
+                type="text"
+                class="form-control"
+                style="width: 400px"
+                placeholder="{%trans 'Search'%}"
+              />
+              <select class="form-control" style="width: 160px" nmae="category">
+                 <option value="">{%trans 'all'%}</option>
+
+                {%for category in categories%}
+                <option value="{{category.id}}">{{category.name}}</option>
+
+                {%endfor%}
+              </select>
+              <button class="btn btn-primary" type="submit">
+                <i class="lni lni-search-alt text-white"></i>
+              </button>
+            </div>
+          </form>
+
+

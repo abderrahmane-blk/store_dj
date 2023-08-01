@@ -1,0 +1,6 @@
+(store_dj-hjcFzht7) C:\Users\DELL\Desktop\store dj>python manage.py createsuperuser
+Username (leave blank to use 'dell'): abdou
+Email address: dah@gmail.com
+Password:
+Password (again):dah12345
+Superuser created successfully.
